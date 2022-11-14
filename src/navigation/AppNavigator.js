@@ -5,12 +5,13 @@ import onBoardingScreen from '../screens/onBoardingScreen';
 import LoginStack from './LoginStck';
 import Register from '../screens/Register';
 import Intro from '../screens/Intro';
+import Bottomtab from '../screens/BottomTab';
 
 
 
 
 const { Navigator, Screen } = createStackNavigator();
-
+    
 const AppNavigator = () => (
     <Navigator screenOptions={{ headerShown: false, }} >
 
@@ -22,6 +23,7 @@ const AppNavigator = () => (
 
         {/* <Screen name='Register' component={Register} /> */}
         <Screen name='Intro' component={Intro} />
+        <Screen name='Bottomtab' component={Bottomtab}/>
 
 
 
