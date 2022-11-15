@@ -7,7 +7,7 @@ import {
 import { colors } from "../config/Colors";
 import fonts from "../constants/fonts";
 import Carousel from 'react-native-snap-carousel';
-import { HomeCarousel } from "./HomeCarousel";
+import HomeCarousel from "./HomeCarousel";
 
 
 const AllRugs = (props) => {
@@ -17,8 +17,9 @@ const AllRugs = (props) => {
                 <Text style={styles.AllRugstext}>ALL RUGS</Text>
                 <TouchableOpacity>
                 <Text style={styles.seealltext}>See All</Text></TouchableOpacity>
-                <HomeCarousel/>
             </View>
+            <HomeCarousel/>
+
         </View>
     );
 };

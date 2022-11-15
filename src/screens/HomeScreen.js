@@ -12,7 +12,6 @@ import Feather from 'react-native-vector-icons/Feather'
 import Images from "../assets/Images";
 import Button from "../components/Button";
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
-import { Catgories } from "../config/Data";
 import AllRugs from "../components/AllRugs";
 import RecentlyViewed from "../components/RecentlyViewed";
 import SimilarProducts from "../components/SimilarProducts";
@@ -20,17 +19,12 @@ import ServiceSection from "../components/ServiceSection";
 import SpotLight from "../components/SpotLight";
 import PopularRugs from "../components/PopularRugs";
 import ShopbySize from "../components/ShopbySize";
+import Categories from "../components/Categories";
 
 
 
 const HomeScreen = () => {
     const navigation = useNavigation();
-
-
-
-
-
-
 
     return (
         <View style={styles.container}>
@@ -41,15 +35,17 @@ const HomeScreen = () => {
                 translucent={true}
             />
             <ScrollView>
-                <View style={{ height: hp("240%") }}>
-
-                    {/* <AllRugs/> */}
+                <View >
+                     <Categories/>
+                    <AllRugs/>
                     <RecentlyViewed />
                     <SimilarProducts />
-                    <ServiceSection />
+                    <ServiceSection /> 
                     <SpotLight/>
                     <ShopbySize/>
-                    <PopularRugs/>
+                    <View style={{marginBottom:hp('15%')}}> 
+                    <PopularRugs/> 
+                    </View> 
                    
                 </View>
             </ScrollView>

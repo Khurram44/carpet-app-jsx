@@ -29,7 +29,15 @@ export default {
     sr1:require("../Images/sr1.png"),
     sr2:require("../Images/sr2.png"),
     pr1:require("../Images/pr1.png"),
-    pr2:require("../Images/pr2.png")
+    pr2:require("../Images/pr2.png"),
+    Snap1:require("../Images/snap1.png"),
+    CircleTop:require("../Images/Circle.png"),
+    Cross:require("../Images/cross.png"),
+    Layer:require("../Images/layer.png")
+
+
+
+
 
 
 
