@@ -13,6 +13,13 @@ import Images from "../assets/Images";
 import Button from "../components/Button";
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
 import { Catgories } from "../config/Data";
+import AllRugs from "../components/AllRugs";
+import RecentlyViewed from "../components/RecentlyViewed";
+import SimilarProducts from "../components/SimilarProducts";
+import ServiceSection from "../components/ServiceSection";
+import SpotLight from "../components/SpotLight";
+import PopularRugs from "../components/PopularRugs";
+import ShopbySize from "../components/ShopbySize";
 
 
 
@@ -32,29 +39,20 @@ const HomeScreen = () => {
                 animated={true}
                 backgroundColor="transparent"
                 translucent={true}
-            /> 
-            <View style={{marginTop:hp('2%')}}>
-                <Text style={styles.heading}>Top Categories</Text>
-            <View style={{marginTop:hp('2%'), flexDirection: 'row', justifyContent: 'space-around' ,flexWrap:'wrap',width:wp('100%'),alignSelf:'center'}}>
-                {Catgories.map((data) => {
-                    return ( 
-                        <TouchableOpacity>
-                        <View style={styles.back}>
-                            <Image source={data.image} style={styles.img} />
-                            <Text style={styles.title}>{data.title}</Text>
-                        </View>
-                        </TouchableOpacity> 
-                    )
-                })}
+            />
+            <ScrollView>
+                <View style={{ height: hp("240%") }}>
 
-                <TouchableOpacity style={styles.back1}>
-                    <Text style={styles.seeall}>See All</Text>
-                </TouchableOpacity>
-            </View>
-            </View>
-
-
-
+                    {/* <AllRugs/> */}
+                    <RecentlyViewed />
+                    <SimilarProducts />
+                    <ServiceSection />
+                    <SpotLight/>
+                    <ShopbySize/>
+                    <PopularRugs/>
+                   
+                </View>
+            </ScrollView>
         </View>
     )
 }
@@ -73,14 +71,14 @@ const styles = StyleSheet.create({
         fontFamily: fonts.POPPINS_REGULAR,
         alignSelf: 'center',
         marginTop: hp('1%'),
-        color:colors.black,
-        letterSpacing:0.5
+        color: colors.black,
+        letterSpacing: 0.5
     },
     seeall: {
         fontSize: 10,
         fontFamily: fonts.POPPINS_REGULAR,
         alignSelf: 'center',
-        color:'#fff'
+        color: '#fff'
     },
     back: {
         backgroundColor: '#F6F6F6',
@@ -89,25 +87,25 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         marginBottom: hp('2%'),
-        marginHorizontal:wp('1')
+        marginHorizontal: wp('1')
 
     },
     back1: {
-        backgroundColor:colors.black,
+        backgroundColor: colors.black,
         width: wp('20%'),
         justifyContent: 'center',
         alignItems: 'center',
         marginBottom: hp('2%'),
-        marginHorizontal:wp('1'),
-        height:hp('9.5%')
+        marginHorizontal: wp('1'),
+        height: hp('9.5%')
 
     },
-    heading:{
-        fontSize:18,
-        fontFamily:fonts.LORA_SEMI_BOLD,
-        alignSelf:'center',
-        color:colors.black,
-        letterSpacing:0.5
+    heading: {
+        fontSize: 18,
+        fontFamily: fonts.LORA_SEMI_BOLD,
+        alignSelf: 'center',
+        color: colors.black,
+        letterSpacing: 0.5
     }
 
 
