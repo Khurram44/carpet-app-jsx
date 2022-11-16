@@ -33,7 +33,13 @@ export default {
     Snap1:require("../Images/snap1.png"),
     CircleTop:require("../Images/Circle.png"),
     Cross:require("../Images/cross.png"),
-    Layer:require("../Images/layer.png")
+    Layer:require("../Images/layer.png"),
+    Filter:require("../Images/Filter.png"),
+    Search:require("../Images/Search.png"),
+    BCross:require("../Images/BigCross.png"),
+
+
+
 
 
 

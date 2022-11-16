@@ -20,7 +20,7 @@ const ProductsCard = (props) => {
                         <View style={styles.card}>
                             <Image source={data.image} />
 
-                            <TouchableOpacity>
+                            <TouchableOpacity onPress={props.onPress}>
                                 <Image source={Images.Shopicon} style={styles.shopicon} /></TouchableOpacity>
                             <View style={styles.contentholder}>
                                 <Text style={styles.name}>{data.name}</Text>

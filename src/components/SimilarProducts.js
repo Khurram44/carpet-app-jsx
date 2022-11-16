@@ -9,6 +9,7 @@ import fonts from "../constants/fonts";
 import Sectionheader from "./SectionHeader";
 import ProductsCard from "./ProductsCard";
 import Images from "../assets/Images";
+import { useNavigation } from "@react-navigation/native";
 
 const CardsData = [
     {
@@ -44,10 +45,12 @@ const CardsData = [
 ]
 
 const SimilarProducts = (props) => {
+    const navigation = useNavigation();
+
     return (
         <View style={styles.mainholder}>
-            <Sectionheader title="SIMILAR PRODUCTS" style={styles.productmain} />
-            <ProductsCard data={CardsData} />
+            <Sectionheader onPress={() => navigation.navigate('ProductListing')} title="SIMILAR PRODUCTS" style={styles.productmain} />
+            <ProductsCard  data={CardsData} />
         </View>
     );
 };

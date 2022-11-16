@@ -7,6 +7,7 @@ import Register from '../screens/Register';
 import Intro from '../screens/Intro';
 import Bottomtab from '../screens/BottomTab';
 import AllCategories from '../screens/AllCategories';
+import ProductListing from '../screens/ProductListing';
 
 
 
@@ -26,6 +27,9 @@ const AppNavigator = () => (
         <Screen name='Intro' component={Intro} />
         <Screen name='Bottomtab' component={Bottomtab}/>
         <Screen name='AllCategories' component={AllCategories}/>
+        <Screen name='ProductListing' component={ProductListing}/>
+
+
 
 
 

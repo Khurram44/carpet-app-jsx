@@ -15,7 +15,7 @@ const Sectionheader = (props) => {
         <View>
  <View style={styles.Allrugsrow}>
                 <Text style={styles.AllRugstext}>{props.title}</Text>
-                <TouchableOpacity>
+                <TouchableOpacity onPress={props.onPress}>
                     <Text style={styles.seealltext}>See All</Text></TouchableOpacity>
              </View>
         </View>

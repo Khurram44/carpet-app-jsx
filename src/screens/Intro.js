@@ -43,7 +43,8 @@ const Intro = () => {
                                     <Text style={styles.light}>{'\n'}DECORATE HOME</Text>
                                 </Text>
                             </View>
-                            <TouchableOpacity style={{ position: 'absolute', right: 15 }}>
+                            <TouchableOpacity onPress={() => navigation.navigate('Bottomtab')}
+                            style={{ position: 'absolute', right: 15 }}>
                                 <Text style={styles.skip}>Skip</Text>
                             </TouchableOpacity>
                         </View>
@@ -87,7 +88,7 @@ const Intro = () => {
                                     <Text style={styles.light}>products</Text>
                                 </Text>
                             </View>
-                            <TouchableOpacity style={{ position: 'absolute', right: 20 }}>
+                            <TouchableOpacity onPress={() => navigation.navigate('Bottomtab')} style={{ position: 'absolute', right: 20 }}>
                                 <Text style={styles.skip}>Skip</Text>
                             </TouchableOpacity>
                         </View>
@@ -135,7 +136,7 @@ const Intro = () => {
                                     <Image source={Images.Union} />
                                 </Text>
                             </View>
-                            <TouchableOpacity style={{ position: 'absolute', right: 20 }}>
+                            <TouchableOpacity onPress={() => navigation.navigate('Bottomtab')} style={{ position: 'absolute', right: 20 }}>
                                 <Text style={styles.skip}>Skip</Text>
                             </TouchableOpacity>
                         </View>
