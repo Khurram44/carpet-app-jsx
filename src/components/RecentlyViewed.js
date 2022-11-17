@@ -49,7 +49,7 @@ const RecentlyViewed = (props) => {
     return (
         <View style={styles.mainholder}>
             <Sectionheader title="RECENTLY VIEWED" />
-            <ProductsCard data = {CardsData} style = {styles.productmain}/>
+            <ProductsCard styles={{marginRight:wp('3%')}} data = {CardsData} style = {styles.productmain}/>
         </View>
     );
 };

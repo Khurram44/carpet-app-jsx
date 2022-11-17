@@ -49,7 +49,8 @@ const PopularRugs = (props) => {
     return (
         <View style={styles.mainholder}>
             <Sectionheader title="POPULAR RUGS" />
-            <ProductsCard data = {CardsData} style = {styles.productmain}/>
+            <ProductsCard styles={{ backgroundColor: '#fff',
+        marginRight: wp("3%")}} data = {CardsData} style = {styles.productmain}/>
         </View>
     );
 };

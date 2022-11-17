@@ -47,7 +47,8 @@ const SpotLight = (props) => {
     return (
         <View style={styles.mainholder}>
             <Sectionheader title="SPOTLIGHT RUGS" style={styles.productmain} />
-            <ProductsCard data={CardsData} />
+            <ProductsCard styles={{ backgroundColor: '#fff',
+        marginRight: wp("2%")}} data={CardsData} />
         </View>
     );
 };

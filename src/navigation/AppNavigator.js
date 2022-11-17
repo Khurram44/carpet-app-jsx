@@ -8,6 +8,9 @@ import Intro from '../screens/Intro';
 import Bottomtab from '../screens/BottomTab';
 import AllCategories from '../screens/AllCategories';
 import ProductListing from '../screens/ProductListing';
+import ProductDetail from '../screens/ProductDetails';
+import ReviewsScreen from '../screens/ReviewsScreen';
+import OrderComplete from '../screens/OrderComplete';
 
 
 
@@ -28,6 +31,12 @@ const AppNavigator = () => (
         <Screen name='Bottomtab' component={Bottomtab}/>
         <Screen name='AllCategories' component={AllCategories}/>
         <Screen name='ProductListing' component={ProductListing}/>
+        <Screen name='ProductDetail' component={ProductDetail}/>
+        <Screen name='ReviewsScreen' component={ReviewsScreen}/>
+        <Screen name='OrderComplete' component={OrderComplete}/>
+
+
+
 
 
 

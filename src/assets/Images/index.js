@@ -37,6 +37,21 @@ export default {
     Filter:require("../Images/Filter.png"),
     Search:require("../Images/Search.png"),
     BCross:require("../Images/BigCross.png"),
+    Notify:require("../Images/Notification.png"),
+    Discountt:require("../Images/Discountt.png"),
+    Topimage:require("../Images/Topimage.png"),
+    Inc:require("../Images/inc.png"),
+    Dec:require("../Images/dec.png"),
+    User1:require("../Images/user1.png"),
+    User2:require("../Images/user2.png"),
+    Check:require("../Images/Check.png"),
+
+
+
+
+
+
+
 
 
 

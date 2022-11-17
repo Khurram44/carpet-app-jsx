@@ -16,7 +16,7 @@ const Categories = () => {
 
 
     return (
-        <View style={{ marginTop: hp('2%') }}>
+        <View style={{ marginTop: hp('0%') }}>
             <Text style={styles.heading}>Top Categories</Text>
             <View style={{ marginTop: hp('2%'), flexDirection: 'row', justifyContent: 'space-around', flexWrap: 'wrap', width: wp('100%'), alignSelf: 'center' }}>
                 {Catgories.map((data) => {
@@ -84,7 +84,8 @@ const styles=StyleSheet.create({
         fontFamily:fonts.LORA_SEMI_BOLD,
         alignSelf:'center',
         color:colors.black,
-        letterSpacing:0.5
+        letterSpacing:0.5,
+        textTransform:'uppercase'
     }
 
 

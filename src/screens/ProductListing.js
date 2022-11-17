@@ -146,10 +146,12 @@ const ProductListing = () => {
                 <ScrollView showsVerticalScrollIndicator={false}
                     style={styles.mainholder}>
                     <Text style={styles.texta}>460 Products Found</Text>
+
                     <View style={{ marginTop: hp('2%'), flexDirection: 'row', justifyContent: 'space-around', flexWrap: 'wrap', width: wp('97%'), alignSelf: 'center' }}>
                         {
                             CardsData.map((data) => {
                                 return (
+                                    <TouchableOpacity onPress={() => navigation.navigate('ProductDetail',{itemData:data})}>
                                     <View style={styles.card}>
                                         <Image source={data.image} />
 
@@ -163,6 +165,7 @@ const ProductListing = () => {
                                             </View>
                                         </View>
                                     </View>
+                                    </TouchableOpacity>
                                 )
                             })
                         }

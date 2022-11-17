@@ -17,7 +17,8 @@ const ProductsCard = (props) => {
             {
                 props.data.map((data) => {
                     return (
-                        <View style={styles.card}>
+                        <TouchableOpacity onPress={props.onPress}>
+                        <View style={props.styles}>
                             <Image source={data.image} />
 
                             <TouchableOpacity onPress={props.onPress}>
@@ -29,6 +30,7 @@ const ProductsCard = (props) => {
                                     <Text style={styles.price}>₹ {data.price}</Text>
                                 </View></View>
                         </View>
+                        </TouchableOpacity>
                     )
                 })
             }
