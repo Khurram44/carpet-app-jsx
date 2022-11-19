@@ -48,8 +48,8 @@ const onBoardingScreen = () => {
                 <View style={styles.buttonrow}>
                     <TouchableOpacity onPress={() => navigation.navigate("LoginStack")} style={styles.buttonLeft}>
                         <Text style={styles.buttontext}>LOGIN</Text>
-                    </TouchableOpacity>
-                    <TouchableOpacity style={styles.buttonRight}>
+                    </TouchableOpacity >
+                    <TouchableOpacity onPress={() => navigation.navigate('Register')} style={styles.buttonRight}>
                         <Text style={styles.buttontextlight}>REGISTER</Text>
                     </TouchableOpacity>
                 </View>

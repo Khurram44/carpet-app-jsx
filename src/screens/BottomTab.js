@@ -11,6 +11,8 @@ import HomeStack from '../navigation/HomeStack';
 import { colors } from '../config/Colors';
 import Images from '../assets/Images';
 import fonts from '../constants/fonts';
+import CategoryTab from './CategoryTab';
+import OffersTab from './OffersTab';
 const Tab = createBottomTabNavigator();
 
 const Bottomtab = () => {
@@ -87,8 +89,8 @@ const Bottomtab = () => {
                     }}
                 />
                 <Tab.Screen
-                    name="Search"
-                    component={HomeStack}
+                    name="CategoryTab"
+                    component={CategoryTab}
                     options={{
                         tabBarIcon: ({ focused }) => {
                             return (
@@ -180,8 +182,8 @@ const Bottomtab = () => {
                     }}
                 />
                 <Tab.Screen
-                    name="Messages"
-                    component={HomeStack}
+                    name="OffersTab"
+                    component={OffersTab}
                     options={{
                         tabBarIcon: ({ focused }) => {
                             return (

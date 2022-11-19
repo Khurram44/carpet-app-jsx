@@ -43,7 +43,7 @@ const Intro = () => {
                                     <Text style={styles.light}>{'\n'}DECORATE HOME</Text>
                                 </Text>
                             </View>
-                            <TouchableOpacity onPress={() => navigation.navigate('Bottomtab')}
+                            <TouchableOpacity onPress={() => navigation.navigate('onBoardingScreen')}
                             style={{ position: 'absolute', right: 15 }}>
                                 <Text style={styles.skip}>Skip</Text>
                             </TouchableOpacity>
@@ -88,7 +88,7 @@ const Intro = () => {
                                     <Text style={styles.light}>products</Text>
                                 </Text>
                             </View>
-                            <TouchableOpacity onPress={() => navigation.navigate('Bottomtab')} style={{ position: 'absolute', right: 20 }}>
+                            <TouchableOpacity onPress={() => navigation.navigate('onBoardingScreen')} style={{ position: 'absolute', right: 20 }}>
                                 <Text style={styles.skip}>Skip</Text>
                             </TouchableOpacity>
                         </View>
@@ -136,7 +136,7 @@ const Intro = () => {
                                     <Image source={Images.Union} />
                                 </Text>
                             </View>
-                            <TouchableOpacity onPress={() => navigation.navigate('Bottomtab')} style={{ position: 'absolute', right: 20 }}>
+                            <TouchableOpacity onPress={() => navigation.navigate('onBoardingScreen')} style={{ position: 'absolute', right: 20 }}>
                                 <Text style={styles.skip}>Skip</Text>
                             </TouchableOpacity>
                         </View>
@@ -145,7 +145,7 @@ const Intro = () => {
                                 <AntDesign name="left" color={'#868686'} size={22} />
                             </TouchableOpacity>
 
-                            <TouchableOpacity onPress={() => navigation.navigate('Bottomtab')}>
+                            <TouchableOpacity onPress={() => navigation.navigate('onBoardingScreen')}>
                                 <View style={styles.backbtn}>
                                     <AntDesign name="right" color={'#fff'} size={22} style={{ alignSelf: 'center' }} />
                                 </View>

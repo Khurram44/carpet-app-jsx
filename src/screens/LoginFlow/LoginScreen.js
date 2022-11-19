@@ -1,5 +1,5 @@
-import React, {useState } from "react";
-import { View, Text, StyleSheet, Image, StatusBar } from "react-native";
+import React, { useState } from "react";
+import { View, Text, StyleSheet, Image, StatusBar, ScrollView } from "react-native";
 import {
     widthPercentageToDP as wp,
     heightPercentageToDP as hp,
@@ -47,6 +47,7 @@ const LoginScreen = () => {
 
             </View>
             <View style={styles.Footer}>
+                <ScrollView>
                 <View style={{ marginHorizontal: wp('5%') }}>
                     <Text style={styles.Footerheading}>Welcome </Text>
                     <View style={styles.rowholder}>
@@ -62,8 +63,7 @@ const LoginScreen = () => {
                     }}
                     onSubmit={(values) => {
 
-                        // navigation.navigate("VerifyCode", { Phone: values.phone })
-
+                    navigation.navigate('Bottomtab')
 
 
                     }}
@@ -86,8 +86,9 @@ const LoginScreen = () => {
                                     style={{
                                         fontSize: 13,
                                         color: "red",
-                                        marginLeft: wp('7%'),
-                                        marginTop: 5
+                                        marginLeft: wp('12%'),
+                                        marginTop: 5,
+                                        marginBottom: hp('1%')
 
                                     }}
                                 >
@@ -114,28 +115,47 @@ const LoginScreen = () => {
                                     style={{
                                         fontSize: 13,
                                         color: "red",
-                                        marginLeft: wp('7%'),
-                                        marginTop: 5
+                                        marginLeft: wp('12%'),
+                                        marginTop: 5,
+                                        marginBottom: hp('1%')
 
                                     }}
                                 >
                                     {errors.password}
                                 </Text>
                             </View>
-                            <TouchableOpacity onPress={() => {navigation.navigate('ForgetPassword') }}>
+                            <TouchableOpacity onPress={() => { navigation.navigate('ForgetPassword') }}>
                                 <Text style={styles.forget}>Forgot Password?</Text>
                             </TouchableOpacity>
-                            <View style={{marginTop:hp('2%')}}>
-                            <Button title="LOGIN"  />
+                            <View style={{ marginTop: hp('2%') }}>
+                                <Button title="LOGIN" onPress={handleSubmit} />
                             </View>
 
                         </>
                     )}
                 </Formik>
+                <View style={{ marginTop: hp('2%') }}>
+                    <Text style={styles.or}>OR</Text>
+                    <View style={{ flexDirection: 'row', justifyContent: 'space-around', marginHorizontal: wp('30%'), marginTop: hp('1%') }}>
+                        <TouchableOpacity style={styles.backsocial}>
+                            <Image source={Images.Google} />
+                        </TouchableOpacity>
+                        <TouchableOpacity style={styles.backsocial}>
+                            <Image source={Images.Fb} />
+                        </TouchableOpacity>
+                    </View>
+                </View>
+                <View style={{ flexDirection: 'row', alignSelf: 'center', marginTop: hp('2%') }}>
+                    <Text style={styles.Bottomtext}>Don't have an account?</Text>
+                    <TouchableOpacity onPress={() => navigation.navigate('Register')}>
+                        <Text style={styles.Bottomtexta}>Register</Text>
+                    </TouchableOpacity>
 
+                </View>
+
+                </ScrollView>
 
             </View>
-
 
 
         </View>
@@ -286,13 +306,40 @@ const styles = StyleSheet.create({
 
 
     },
-    forget:{
-        color:'#C1864F',
-        textAlign:'center',
-        fontFamily:fonts.POPPINS_MEDIUM,
-        fontSize:16
+    forget: {
+        color: '#C1864F',
+        textAlign: 'center',
+        fontFamily: fonts.POPPINS_MEDIUM,
+        fontSize: 16
 
+    },
+    or: {
+        fontSize: 14,
+        fontFamily: fonts.POPPINS_REGULAR,
+        color: '#868686',
+        alignSelf: 'center'
+    },
+    backsocial: {
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: '#fff',
+        borderWidth: 1,
+        borderColor: '#E6E6E6',
+        width: wp('13%'),
+        borderRadius: 50,
+        padding: wp('3%')
+    }, Bottomtext: {
+        fontFamily: fonts.POPPINS_MEDIUM,
+        fontSize: 16,
+        color:colors.black
+    },
+    Bottomtexta: {
+        fontFamily: fonts.POPPINS_MEDIUM,
+        fontSize: 16,
+        color:colors.btn,
+        marginHorizontal:wp('1.5%')
     }
+
 
 
 

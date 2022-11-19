@@ -84,8 +84,9 @@ const ChangePassword= () => {
                                 style={{
                                     fontSize: 13,
                                     color: "red",
-                                    marginLeft: wp('7%'),
-                                    marginTop: 5         
+                                    marginLeft: wp('12%'),
+                                    marginTop: 5   ,
+                                    marginBottom:hp('1%')      
                                       
                                 }}
                             >
@@ -112,15 +113,16 @@ const ChangePassword= () => {
                                 style={{
                                     fontSize: 13,
                                     color: "red",
-                                    marginLeft: wp('7%'),
-                                    marginTop: 5
+                                    marginLeft: wp('12%'),
+                                    marginTop: 5,
+                                    marginBottom:hp('2%')
 
                                 }}
                             >
                                 {errors.confirmpass}
                             </Text>
                         </View>
-                        <Button title="Submit" onPress={handleSubmit} />
+                        <Button title="RESET PASSWORD" onPress={handleSubmit} />
                     </>
                 )}
             </Formik>

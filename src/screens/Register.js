@@ -25,7 +25,9 @@ const validationSchema = Yup.object().shape({
         .matches(/^[A-Za-z ]*$/, 'Please enter valid name')
         .max(40)
         .required(),
-    email: Yup.string().email(),
+    email: Yup.string().email().required("Email is Required"),
+    confirmpass: Yup.string().required("Confirm Password is Required").oneOf([Yup.ref('password'), null], 'Passwords must match'),
+
 
 })
 
@@ -34,6 +36,8 @@ const Register = () => {
 
     const [state, setState] = React.useState('0');
     const [isSecureEntry, setIsSecureEntry] = useState(true);
+    const [isSecureEntry1, setIsSecureEntry1] = useState(true);
+
 
 
 
@@ -63,7 +67,9 @@ const Register = () => {
                         initialValues={{
                             phone: "",
                             password: "",
-                            fullname: ""
+                            fullname: "",
+                            confirmpass: "",
+                            email: ""
 
 
                         }}
@@ -91,11 +97,11 @@ const Register = () => {
                                     />
                                     <Text
                                         style={{
-                                            fontSize: 12,
+                                            fontSize: 13,
                                             color: "red",
-                                            marginLeft: wp('15.5%'),
+                                            marginLeft: wp('12%'),
                                             marginTop: 5,
-                                            marginBottom: hp("1.5%")
+                                            marginBottom: hp("1%")
 
                                         }}
                                     >
@@ -114,11 +120,11 @@ const Register = () => {
                                     />
                                     <Text
                                         style={{
-                                            fontSize: 12,
+                                            fontSize: 13,
                                             color: "red",
-                                            marginLeft: wp('15.5%'),
+                                            marginLeft: wp('12%'),
                                             marginTop: 5,
-                                            marginBottom: hp("1.5%")
+                                            marginBottom: hp("1%")
 
                                         }}
                                     >
@@ -137,11 +143,11 @@ const Register = () => {
                                     />
                                     <Text
                                         style={{
-                                            fontSize: 12,
+                                            fontSize: 13,
                                             color: "red",
-                                            marginLeft: wp('15.5%'),
+                                            marginLeft: wp('12%'),
                                             marginTop: 5,
-                                            marginBottom: hp("1.5%")
+                                            marginBottom: hp("1%")
 
                                         }}
                                     >
@@ -169,11 +175,11 @@ const Register = () => {
                                     </View>
                                     <Text
                                         style={{
-                                            fontSize: 12,
+                                            fontSize: 13,
                                             color: "red",
-                                            marginLeft: wp('15.5%'),
+                                            marginLeft: wp('12%'),
                                             marginTop: 5,
-                                            marginBottom: hp("1.5%")
+                                            marginBottom: hp("1%")
 
                                         }}
                                     >
@@ -186,35 +192,40 @@ const Register = () => {
                                             style={styles.inputStyle}
                                             placeholder=""
 
-                                            placeholderTextColor={colors.lightColor} value={values.password} onChangeText={handleChange('password')}
+                                            placeholderTextColor={colors.lightColor} value={values.confirmpass} onChangeText={handleChange('confirmpass')}
 
-                                            secureTextEntry={isSecureEntry}
+                                            secureTextEntry={isSecureEntry1}
 
                                         />
 
-                                        <TouchableOpacity onPress={() => { setIsSecureEntry((prev) => !prev) }}>
-                                            <Feather style={{}} size={20} color={colors.black} name={isSecureEntry ? 'eye-off' : 'eye'} />
+                                        <TouchableOpacity onPress={() => { setIsSecureEntry1((prev) => !prev) }}>
+                                            <Feather style={{}} size={20} color={colors.black} name={isSecureEntry1 ? 'eye-off' : 'eye'} />
                                         </TouchableOpacity>
                                     </View>
                                     <Text
                                         style={{
-                                            fontSize: 12,
+                                            fontSize: 13,
                                             color: "red",
-                                            marginLeft: wp('15.5%'),
+                                            marginLeft: wp('15%'),
                                             marginTop: 5,
-                                            marginBottom: hp("1.5%")
 
                                         }}
                                     >
-                                        {errors.password}
+                                        {errors.confirmpass}
                                     </Text>
                                 </View>
                                 <TouchableOpacity onPress={() => { navigation.navigate('ForgetPassword') }}>
 
                                 </TouchableOpacity>
                                 <View style={{ marginTop: hp('1%'), marginBottom: hp("1%") }}>
-                                    <Button title="REGISTER" />
-                                    <Text style={styles.Bottomtext}>Already have an account</Text>
+                                    <Button title="REGISTER" onPress={handleSubmit} />
+                                    <View style={{flexDirection:'row',alignSelf:'center',marginTop:hp('2%')}}>
+                                    <Text style={styles.Bottomtext}>Already have an account ?</Text>
+                                    <TouchableOpacity onPress={() => navigation.navigate('LoginStack')}>
+                                    <Text style={styles.Bottomtexta}>Login</Text>
+                                    </TouchableOpacity>
+
+                                    </View>
 
                                 </View>
 
@@ -311,6 +322,13 @@ const styles = StyleSheet.create({
 
 
         fontFamily: fonts.POPPINS_MEDIUM,
+        fontSize: 16,
+        color:colors.black
+    },
+    buttontexta: {
+
+
+        fontFamily: fonts.POPPINS_MEDIUM,
         fontStyle: "normal",
         fontWeight: "500",
         fontSize: 16,
@@ -384,6 +402,15 @@ const styles = StyleSheet.create({
 
     },
     Bottomtext: {
+        fontFamily: fonts.POPPINS_MEDIUM,
+        fontSize: 16,
+        color:colors.black
+    },
+    Bottomtexta: {
+        fontFamily: fonts.POPPINS_MEDIUM,
+        fontSize: 16,
+        color:colors.btn,
+        marginHorizontal:wp('1.5%')
     }
 
 

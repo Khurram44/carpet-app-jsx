@@ -72,8 +72,9 @@ const ForgetPassword = () => {
                                 style={{
                                     fontSize: 13,
                                     color: "red",
-                                    marginLeft: wp('7%'),
-                                    marginTop: 5
+                                    marginLeft: wp('12%'),
+                                    marginTop: 5,
+                                    marginBottom:hp('2%')
 
                                 }}
                             >

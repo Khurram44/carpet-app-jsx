@@ -45,6 +45,17 @@ export default {
     User1:require("../Images/user1.png"),
     User2:require("../Images/user2.png"),
     Check:require("../Images/Check.png"),
+    Fb:require("../Images/facebook.png"),
+    Google:require("../Images/google.png"),
+    Offer1:require("../Images/Offer1.png"),
+    Offer2:require("../Images/Offer2.png"),
+    Offer3:require("../Images/Offer3.png"),
+    Offer4:require("../Images/Offer4.png"),
+    Offer5:require("../Images/Offer5.png"),
+
+
+
+
 
 
 
