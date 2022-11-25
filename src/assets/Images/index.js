@@ -52,6 +52,47 @@ export default {
     Offer3:require("../Images/Offer3.png"),
     Offer4:require("../Images/Offer4.png"),
     Offer5:require("../Images/Offer5.png"),
+    Noti:require("../Images/noti.png"),
+    Package:require("../Images/package.png"),
+    Promo:require("../Images/promo.png"),
+    Profileimg:require("../Images/Profileimg.png"),
+    Profileicon:require("../Images/Profileicon.png"),
+    Settingicon:require("../Images/Settingicon.png"),
+    Locationicon:require("../Images/Locationicon.png"),
+    Hearticon:require("../Images/Hearticon.png"),
+    Buyicon:require("../Images/Buyicon.png"),
+    Logout:require("../Images/Logout.png"),
+    Lock:require("../Images/Lock.png"),
+    Document:require("../Images/Document.png"),
+    Call:require("../Images/Call.png"),
+    EditPro:require("../Images/Editpro.png"),
+    Callorange:require("../Images/Callorange.png"),
+    Locationorange:require("../Images/Locationorange.png"),
+    Mailorange:require("../Images/Mailorange.png"),
+    Camera:require("../Images/Camera.png"),
+    Addresslogo:require("../Images/addresslogo.png"),
+    Delete:require("../Images/Delete.png"),
+    EditOrange:require("../Images/Editorange.png"),
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

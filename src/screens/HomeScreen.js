@@ -46,7 +46,7 @@ const HomeScreen = () => {
                         <TouchableOpacity>
                             <Image source={Images.Search} style={{ marginRight: 15 }} /></TouchableOpacity>
 
-                        <TouchableOpacity>
+                        <TouchableOpacity onPress={() => navigation.navigate('Notification')}>
                             <Image source={Images.Notify} style={{ marginLeft: 5, marginTop: 2.5 }} /></TouchableOpacity>
                     </View>
             <View style={{ marginHorizontal: wp('5%'),marginTop:hp('10%') }}>

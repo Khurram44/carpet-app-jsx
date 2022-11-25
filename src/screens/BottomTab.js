@@ -13,6 +13,7 @@ import Images from '../assets/Images';
 import fonts from '../constants/fonts';
 import CategoryTab from './CategoryTab';
 import OffersTab from './OffersTab';
+import ProfileScreen from './ProfileScreen';
 const Tab = createBottomTabNavigator();
 
 const Bottomtab = () => {
@@ -231,7 +232,7 @@ const Bottomtab = () => {
 
                 <Tab.Screen
                     name="Profile"
-                    component={HomeStack}
+                    component={ProfileScreen}
                     options={{
                         tabBarIcon: ({ focused }) => {
                             return (

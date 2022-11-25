@@ -48,7 +48,7 @@ const OffersTab = () => {
                     <TouchableOpacity>
                         <Image source={Images.Search} style={{ marginRight: 15 }} /></TouchableOpacity>
 
-                    <TouchableOpacity>
+                    <TouchableOpacity onPress={() => navigation.navigate('Notification')}>
                         <Image source={Images.Notify} style={{ marginLeft: 5, marginTop: 2.5 }} /></TouchableOpacity>
                 </View>
                 <View style={{ marginHorizontal: wp('5%'), marginTop: hp('10%') }}>
@@ -68,17 +68,17 @@ const OffersTab = () => {
                     {Offers.map((data) => {
                         return (
                             <TouchableOpacity>
-                            <View style={{ marginBottom: hp('2%'), alignSelf: 'center' }}>
-                                <Image source={data.image} />
-                            </View>
+                                <View style={{ marginBottom: hp('2%'), alignSelf: 'center' }}>
+                                    <Image source={data.image} />
+                                </View>
                             </TouchableOpacity>
                         )
                     })}
-        </View>
-        <Text style={{marginBottom:hp('20%')}}> </Text>
-        </ScrollView>
+                </View>
+                <Text style={{ marginBottom: hp('20%') }}> </Text>
+            </ScrollView>
 
-          
+
         </View >
     )
 }
